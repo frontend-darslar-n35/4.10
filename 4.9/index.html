@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <video style="width:320px; height:240px;"
+                    src="https://www.sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" autoplay
+                    controls></video>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <form class="col-11 search-form d-flex">
+                <input type="text" class="form-control search-input" value="Hulk" placeholder="Search ...">
+                <select class="form-select movie-type-select" id="">
+                    <option value="" selected disabled>-- Select genre -- </option>
+                    <option value="series">series</option>
+                    <option value="movie">movie</option>
+                    <option value="episode">episode</option>
+                </select>
+                <button class="btn btn-success" type="submit">Search</button>
+            </form>
+            <div class="col-1">
+                Results:<span class="results">0</span>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-2">
+
+            </div>
+            <div class="col-10">
+                <div class="row movies">
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col">
+                <ul class="pagination ">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <template id="pagination-item">
+        <li class="page-item">
+            <a href="#" class="page-link">1</a>
+        </li>
+    </template>
+
+    <template id="loader">
+        <div class="col d-flex justify-content-center align-items-center">
+            <img width="200" height="200" src="./img/spinner.gif" alt="">
+        </div>
+    </template>
+
+    <template id="movie-item">
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top movie-image" src="http://picsum.photos/200/200" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title movie-title">Card title</h5>
+                    <p class="card-text movie-description">Some quick example text to build on the card title and make
+                        up the
+                        bulk of the card's
+                        content.</p>
+                    <a href="#" class="btn btn-danger delete">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </template>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
